@@ -3,8 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:newsappnew/models/articleModel.dart';
+import 'package:newsappnew/tourch.dart';
+import 'package:newsappnew/youtube.dart';
+import 'package:torch_controller/torch_controller.dart';
 
 void main() {
+  TorchController().initialize();
   runApp(const MyApp());
 }
 
@@ -19,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Youtube(),
     );
   }
 }
